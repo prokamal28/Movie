@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <title>Movie App</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="./../node_modules/animate.css/animate.min.css"
+    />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+
+  <body class="text-white bg-black"">
+    <aside class="fixed bg-black flex z-10 h-screen ">
+      <div class="flex flex-col justify-between px-5 py-5" id="sideHide">
+        <div class="">
+          <ul class="capitalize">
+            <li
+              class="py-2 hover:text-red-400 duration-500 animate__animated animate__bounceInUp"
+            >
+              <a href="#" class="now">now playing</a>
+            </li>
+            <li
+              class="py-2 hover:text-red-400 duration-500 animate__animated animate__bounceInUp"
+            >
+              <a href="#"  class="pop">popular</a>
+            </li>
+            <li
+              class="py-2 hover:text-red-400 duration-500 animate__animated animate__bounceInUp"
+            >
+              <a href="#"  class="top">top rated</a>
+            </li>
+            <li
+              class="py-2 hover:text-red-400 duration-500 animate__animated animate__bounceInUp"
+            >
+              <a href="#"  class="trend">trending</a>
+            </li>
+            <li
+              class="py-2 hover:text-red-400 duration-500 animate__animated animate__bounceInUp"
+            >
+              <a href="#"  class="upcome">upcoming</a>
+            </li>
+            <li
+              class="py-2 hover:text-red-400 duration-500 animate__animated animate__bounceInUp"
+            >
+              <a href="#contact"  class="contact">contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-lg">
+          <div class="navIcons flex space-x-3 py-2">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="navInfo text-sm">
+            <p>copyright © 2022 all rights reserved.</p>
+            <p>
+              created by
+              <a href="#" class="text-red-400 hover:text-red-700 duration-500"
+                >Mohamed Kamal</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white text-black py-5 flex flex-col justify-between items-center"
+      >
+        <figure class="logo">
+          <img src="./images/logo.png" alt="logo" class="w-1/2 mx-auto" />
+        </figure>
+
+        <div>
+          <a href="#">
+            <i class="fa-solid fa-xmark" id="close"></i>
+          </a>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </aside>
+
+    
+    <section class="py-10 "  id="home">
+      <div class="text-center">
+        <input
+          class="bg-black rounded-lg w-1/3 mx-auto text-white border px-2"
+          type="text"
+          id="search"
+          placeholder="Search"
+        />
+      </div>
+
+      <div id="cards" class="cards w-[90%] mx-auto flex flex-wrap justify-between items-center  py-5 ">
+    
+      </div>
+    </section>
+
+
+    
+
+    <div id="load" class="loader absolute left-1/2 right-1/2 top-1/2 bottom-1/2 hidden">
+
+    </div>
+
+
+    <div class="backTop bg-red-600 w-10 h-10 rounded-full items-center justify-center cursor-pointer
+                fixed right-3 bottom-3 hidden">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+
+    <section id="contact" class="py-5 ">
+      <div class="container w-[90%] mx-auto text-center">
+        <h1 class="capitalize font-black text-start py-5">contact us</h1>
+        <form class="flex flex-wrap ">
+          <div class="w-full md:w-1/2">
+            <input type="text" required placeholder="Enter Your Name" id="nameUser" class="text-center w-[95%] py-2 bg-transparent border-b-2 border-gray-400">
+            <p class="text-start ps-5 pt-1 nameMsg">Ex : Ahmed</p>
+          </div>
+
+          <div class="w-full md:w-1/2">
+          <input type="email" required placeholder="Enter Your Email" id="emal" class="text-center w-[95%] py-2 bg-transparent border-b-2 border-gray-400">
+          <p class="text-start ps-5 pt-1 emalMsg">Ex : example@app.com</p>
+
+          </div>
+
+          <div class="w-full md:w-1/2">
+          <input type="phone" required placeholder="Enter Your Phone" id="phon" class="text-center w-[95%] py-2 bg-transparent border-b-2 border-gray-400">
+          <p class="text-start ps-5 pt-1 phonMsg">Ex : 01234567891</p>
+
+          </div>
+
+          <div class="w-full md:w-1/2">
+          <input type="number" required placeholder="Enter Your Age"  id="age" class="text-center w-[95%] py-2 bg-transparent border-b-2 border-gray-400">
+          <p class="text-start ps-5 pt-1 ageMsg">Ex : 18</p>
+
+          </div>
+
+          <div class="w-full md:w-1/2">
+          <input type="text" required placeholder="Enter Your Password"  id="pass" class="text-center w-[95%] py-2 bg-transparent border-b-2 border-gray-400">
+          <p class="text-start ps-5 pt-1 passMsg">Ex : Asdfgh@1</p>
+
+          </div>
+
+          <div class="w-full md:w-1/2">
+          <input type="text" required placeholder="ReEnter Password"  id="rePass" class="text-center w-[95%] py-2 bg-transparent border-b-2 border-gray-400">
+          <p class="text-start ps-5 pt-1 rePassMsg">Match</p>
+
+          </div>
+
+         <button id="btn" type="submit" class="py-2 px-4 my-3 hover:bg-white hover:text-black rounded-full"> submite</button>
+          
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- http requests -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
